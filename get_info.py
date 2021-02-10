@@ -11,13 +11,10 @@ from selenium.common.exceptions import StaleElementReferenceException
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import TimeoutException
 
-
 import datetime
 import time
 import sys
 import re
-import pprint
-
 
 def check_for_premium_ad(driver):
     try:
@@ -137,12 +134,10 @@ def get_preroll_advertiser(driver):
 
 def play_video(driver):
     try:
-        WebDriverWait(driver, 2).until(EC.element_to_be_clickable((By.XPATH, '//button[@class="ytp-large-play-button ytp-button"]')))
         play_button = driver.find_element_by_xpath('//button[@class="ytp-large-play-button ytp-button"]')
         play_button.click()
 
-    except Exception as e:
-        print(e)
+    except:
         print('playing video failed')
         return 0
 
@@ -184,7 +179,8 @@ def scroll_to_find_video(driver, video_index):
     videos = driver.find_elements_by_xpath("//a[@id='video-title']")
     print('scrolling')
     try:
-        WebDriverWait(driver, 2).until(EC.visibility_of(videos[video_index]))
+        WebDriverWaeit(driver, 2).until(EC.visibility_of(
+            videos[video_index]))
         found = True
     except:
         found = False
@@ -259,91 +255,45 @@ def get_channel_info(driver):
 
 def get_views(driver):
     container = driver.find_element_by_xpath('//span[@class="view-count style-scope yt-view-count-renderer"]')
-    temp = removesuffix(container.text, ' views')
-    temp = removesuffix(temp, ' watching now').replace(',', '')
-
-    return int(temp)
+    return int(removesuffix(container.text, ' views').replace(',', ''))
 
 def get_comment_count(driver):
-    # try:
-    #     element_to_hover = driver.find_element_by_xpath('//video[class="video-stream html5-main-video"]')
-    #     hover = ActionChains(driver).move_to_element(element_to_hover)
-    #     hover.perform()
-    #     driver.find_element_by_xpath('//button[class="ytp-live-badge ytp-button"]')
-    #     print('live found')
-    #     return -1
-    # except:
-    #     print('excepted')
-    #     pass
-
-
-    SCROLL_PAUSE_TIME = .5
+    SCROLL_PAUSE_TIME = 0.5
 
     last_height = driver.execute_script("return document.documentElement.scrollHeight")
-    found = False
-    container = None
+    driver.execute_script("window.scrollTo(0, " + str(last_height/4) + ");")
+    time.sleep(SCROLL_PAUSE_TIME)
 
-    while not found:
-        try:
-            # WebDriverWait(driver, 2).until(EC.presence_of_element_located(By.XPATH, '//yt-formatted-string[@class="count-text style-scope ytd-comments-header-renderer"]'))
-            container = driver.find_element_by_xpath('//yt-formatted-string[@class="count-text style-scope ytd-comments-header-renderer"]')
-            found = True
-            print('found comments')
-        except:
-            found = False
-
-        if not found:
-            print('in scroll loop')
-            # Scroll down to bottom
-            driver.execute_script("window.scrollTo(0, " + str(last_height/4) + ");")
-            print('scrolled')
-            # Wait to load page
-            time.sleep(SCROLL_PAUSE_TIME)
-
-            # Calculate new scroll height and compare with last scroll height
-            new_height = driver.execute_script("return document.documentElement.scrollHeight")
-
-            print(last_height)
-            print(new_height)    
-
-            if new_height == last_height:
-                return -1
-            last_height = new_height
-
-        
-
-
-    # container = driver.find_element_by_xpath('//yt-formatted-string[@class="count-text style-scope ytd-comments-header-renderer"]')
+    container = driver.find_element_by_xpath('//yt-formatted-string[@class="count-text style-scope ytd-comments-header-renderer"]')
     return int(removesuffix(container.text, ' Comments').replace(',', ''))
 
 def get_likes(driver):
     button_container = driver.find_element_by_xpath('//div[@id="top-level-buttons"]')
     containers = button_container.find_elements_by_xpath('.//yt-formatted-string[@class="style-scope ytd-toggle-button-renderer style-text"]')
 
-    likes = -1
-    dislikes = -1
+    likes = None
+    dislikes = None
 
-    first = True
     for container in containers:
-        # print(container.get_attribute('class'))
         aria_label = container.get_attribute('aria-label')
-        if aria_label is None:
-            aria_label = container.text
-        aria_label = aria_label.replace(',', '')
 
-        if 'dislike' in aria_label:
-            dislikes = int("".join(list(filter(str.isdigit, aria_label))))
+        if ' likes' in aria_label:
+            likes = int(removesuffix(aria_label, ' likes').replace(',', ''))
+            
+        elif ' dislikes' in aria_label:
+            dislikes = int(removesuffix(aria_label, ' dislikes').replace(',', ''))
 
         else:
-            likes = int("".join(list(filter(str.isdigit, aria_label))))
-
+            pass
 
     return likes, dislikes
 
 def get_descr_link(link_text):
     search = "http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+"
 
+    print('pre format', link_text)
     temp = removeprefix(link_text, "https://www.youtube.com/")
+    print("prefix removed", temp)
 
     temp = temp.replace("%3A", ":")
     temp = temp.replace("%2F", "/")
@@ -358,12 +308,8 @@ def get_descr_link(link_text):
 
 
 def get_description(driver):
-    try:
-        driver.find_element_by_xpath('//yt-formatted-string[@class="less-button style-scope ytd-video-secondary-info-renderer"]')
-        pass
-    except:
-        show_more = driver.find_element_by_xpath('//yt-formatted-string[@class="more-button style-scope ytd-video-secondary-info-renderer"]')
-        show_more.click()
+    show_more = driver.find_element_by_xpath('//yt-formatted-string[@class="more-button style-scope ytd-video-secondary-info-renderer"]')
+    show_more.click()
 
     container = driver.find_element_by_xpath('//div[@id="description"]')
     text_blocks = container.find_elements_by_xpath('.//span[@class="style-scope yt-formatted-string"]')
@@ -410,18 +356,12 @@ def get_description(driver):
 def get_upload_date(driver):
     container = driver.find_element_by_xpath('//div[@id="date"]')
     date = container.find_element_by_xpath('.//yt-formatted-string[@class="style-scope ytd-video-primary-info-renderer"]').text
-    date = removeprefix(date, "Started streaming on ")
-    date = removeprefix(date, "Premiered ")
     date_time_object = datetime.datetime.strptime(date, '%b %d, %Y')
     
     return date, int(date_time_object.timestamp())
 
-def check_live(driver):
-    container = driver.find_element_by_xpath('//span[@class="view-count style-scope yt-view-count-renderer"]')
-    if 'watching now' in container.text:
-        return True
-    else:
-        return False
+
+
 
 
 
@@ -430,138 +370,66 @@ def main():
     url_matcher = "^https?:\/\/[^#?\/]+"
     video_id_matcher = "watch\?v=[-\w]+"
 
-    options = webdriver.FirefoxOptions()
-    options.add_argument("-headless")
-    options.add_argument("--mute-audio")
 
-    profile = webdriver.FirefoxProfile()
-    profile.set_preference("media.volume_scale", "0.0");
-
-    driver = webdriver.Firefox(firefox_profile = profile, options = options)
+    driver = webdriver.Firefox()
     actions = ActionChains(driver)
 
 
-    base_url = 'https://www.youtube.com/watch?v='
-
-    video_list = ['KJ5UazhKXC8', 'FDEYHxtimKk', '0te6noMKffA', 'ownHh9QIsRk', 'tutZKLeGrCs', '0JW7_HRWahU', 'Pyzg3biuz1Q', 'P_6my53IlxY', 'O7cwFYAQvEU', 'JqhOPUVE9Os', '6lOgh8torPA']
+    url = 'https://www.youtube.com/watch?v=DM-nn2jijtM'
 
     data = []
 
-    for video_id in video_list:
+    driver.get(url)
+    time.sleep(4)
 
-        driver.get(base_url + video_id)
+    title = get_title(driver)
 
-        check_for_premium_ad(driver)
+    channelID, channelName = get_channel_info(driver)
 
-        played = play_video(driver)
+    views = get_views(driver)
 
-        # time.sleep(6)
+    likes, dislikes = get_likes(driver)
 
-        if not played:
-            continue
+    descr, descrurls = get_description(driver)
 
-        results = []
-        ad_url = None
-        preroll_info = None
-        banner_info = None
+    dateuploaded, uploadts = get_upload_date(driver)
 
-
-        preroll_info = check_preroll_info(driver)
-
-        if preroll_info is not None:
-            preroll_results = get_ad_info(driver, preroll_info)
-            ad_url = get_preroll_advertiser(driver)
-
-        # else:
-        #     skip_to(driver, "5")
-        #     time.sleep(6)
-        #     banner_info = check_preroll_info(driver)
-        #     if banner_info is not None:
-        #         time.sleep(1)
-        #         banner_results = get_ad_info(driver, banner_info)
-        #         ad_url = get_banner_advertiser(driver)
-
-        if ad_url:
-            ad_url_base = re.search(url_matcher,ad_url)[0]
-        else:
-            ad_url_base = None
-
-        islive = check_live(driver)
-
-        title = get_title(driver)
-
-        channelID, channelName = get_channel_info(driver)
-
-        views = get_views(driver)
-
-        if islive:
-            likes, dislikes, comments = -1, -1, -1
-
-        else:
-            likes, dislikes = get_likes(driver)
-
-            comments = get_comment_count(driver)
-
-        descr, descrurls = get_description(driver)
-
-        dateuploaded, uploadts = get_upload_date(driver)
-
-        
-
-        # if not live:
-        #     likes, dislikes = get_likes(driver)
-
-        #     comments = get_comment_count(driver)
-        # else:
-        #     likes, dislikes, comments = 0, 0, 0
-
-        toStore = {
-            'videoid' : video_id,
-            'videoname' : title,
-            'channelid' : channelID,
-            'channelname' : channelName,
-            'islive' : islive,
-            'views' : views,
-            'comments' : comments,
-            'likes' : likes,
-            'dislikes' : dislikes,
-            'descr' : descr,
-            'descrurls' : descrurls,
-            'preroll' : False,
-            'prerolladvertiser' : None,
-            'prerollfullurl' : None,
-            'prerolltargetinginfo' : None,
-            'banner' : False,
-            'banneradvertiser' : None,
-            'bannerfullurl' : None,
-            'bannertargetinginfo' : None,
-            'datecollected' : int(time.time()),
-            'dateuploaded' : dateuploaded,
-            'uploadts' : uploadts,
-            'classification' : None,
-            'testid' : None
-        }
-
-        if preroll_info:
-            toStore['preroll'] = True
-            toStore['prerollAdvertiser'] = ad_url_base
-            toStore['prerollFullUrl'] = ad_url
-            toStore['prerollTargetingInfo'] = preroll_results
-
-        if banner_info:
-            toStore['banner'] = True
-            toStore['bannerAdvertiser'] = ad_url_base
-            toStore['bannerFullUrl'] = ad_url
-            toStore['bannerTargetingInfo'] = banner_results
+    comments = get_comment_count(driver)
 
 
-        data.append(toStore)
+    toStore = {
+        'videoid' : 'video_id',
+        'videoname' : title,
+        'channelid' : channelID,
+        'channelname' : channelName,
+        'views' : views,
+        'comments' : comments,
+        'likes' : likes,
+        'dislikes' : dislikes,
+        'descr' : descr,
+        'descrurls' : descrurls,
+        'preroll' : False,
+        'prerolladvertiser' : None,
+        'prerollfullurl' : None,
+        'prerolltargetinginfo' : None,
+        'banner' : False,
+        'banneradvertiser' : None,
+        'bannerfullurl' : None,
+        'bannertargetinginfo' : None,
+        'datecollected' : int(time.time()),
+        'dateuploaded' : dateuploaded,
+        'uploadts' : uploadts,
+        'classification' : None,
+        'offSiteurls' : None,
+        'testid' : None
+    }
 
-    pp = pprint.PrettyPrinter(indent = 4)
-    pp.pprint(data)
 
-    driver.quit()
 
+
+    data.append(toStore)
+
+    print(data)
 
 
 

@@ -1,0 +1,1 @@
+print(int("".join(list(filter(str.isdigit, '24,235 likes')))))
