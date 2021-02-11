@@ -265,24 +265,13 @@ def get_views(driver):
     return int(temp)
 
 def get_comment_count(driver):
-    # try:
-    #     element_to_hover = driver.find_element_by_xpath('//video[class="video-stream html5-main-video"]')
-    #     hover = ActionChains(driver).move_to_element(element_to_hover)
-    #     hover.perform()
-    #     driver.find_element_by_xpath('//button[class="ytp-live-badge ytp-button"]')
-    #     print('live found')
-    #     return -1
-    # except:
-    #     print('excepted')
-    #     pass
-
-
     SCROLL_PAUSE_TIME = .5
 
     last_height = driver.execute_script("return document.documentElement.scrollHeight")
     found = False
     container = None
 
+    count = 0
     while not found:
         try:
             # WebDriverWait(driver, 2).until(EC.presence_of_element_located(By.XPATH, '//yt-formatted-string[@class="count-text style-scope ytd-comments-header-renderer"]'))
@@ -306,9 +295,11 @@ def get_comment_count(driver):
             print(last_height)
             print(new_height)    
 
-            if new_height == last_height:
+            if (new_height == last_height) and count > 3:
                 return -1
             last_height = new_height
+
+        count += 1
 
         
 
@@ -443,7 +434,7 @@ def main():
 
     base_url = 'https://www.youtube.com/watch?v='
 
-    video_list = ['KJ5UazhKXC8', 'FDEYHxtimKk', '0te6noMKffA', 'ownHh9QIsRk', 'tutZKLeGrCs', '0JW7_HRWahU', 'Pyzg3biuz1Q', 'P_6my53IlxY', 'O7cwFYAQvEU', 'JqhOPUVE9Os', '6lOgh8torPA']
+    video_list = ['KJ5UazhKXC8', 'FDEYHxtimKk', '0te6noMKffA', 'ownHh9QIsRk', 'tutZKLeGrCs', '0JW7_HRWahU', 'Pyzg3biuz1Q', 'P_6my53IlxY', 'O7cwFYAQvEU', 'JqhOPUVE9Os', '6lOgh8torPA', 'Ldc5aG_1Q7o', 'IZ_8b_Ydsv0', 'o27tIdYggY0', 'H6uBaP0KoWg']
 
     data = []
 

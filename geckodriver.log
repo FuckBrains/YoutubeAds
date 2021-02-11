@@ -2599,3 +2599,466 @@ JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: Inv
 JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
 JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
 JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+1613071586369	geckodriver	INFO	Listening on 127.0.0.1:50718
+1613071589480	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--mute-audio" "-foreground" "-no-remote" "-profile" "C:\\Users\\Cameron\\AppData\\Local\\Temp\\rust_mozprofileDzxlMa"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613071590645	Marionette	INFO	Listening on port 50726
+1613071591016	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613071591026	Marionette	ERROR	[18] No reply from Marionette:Register
+1613071592639	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 225: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript warning: https://pagead2.googlesyndication.com/bg/opx5ERcMHJe16-k0Z0uhxF7FXNF2rLCwkS-n9ofFqfI.js line 1 > eval line 4793 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/opx5ERcMHJe16-k0Z0uhxF7FXNF2rLCwkS-n9ofFqfI.js line 1 > eval line 4793 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+1613071600239	Marionette	ERROR	[4294967303] No reply from Marionette:Register
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript warning: https://pagead2.googlesyndication.com/bg/opx5ERcMHJe16-k0Z0uhxF7FXNF2rLCwkS-n9ofFqfI.js line 1 > eval line 3704 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/opx5ERcMHJe16-k0Z0uhxF7FXNF2rLCwkS-n9ofFqfI.js line 1 > eval line 3704 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+1613071605906	Marionette	ERROR	[4294967307] No reply from Marionette:Register
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 225: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 225: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 225: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 453: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 225: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 225: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 453: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 225: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 225: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'PictureInPictureToggle' has been destroyed
+1613071666000	Marionette	INFO	Stopped listening on port 50726
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+1613071774764	geckodriver	INFO	Listening on 127.0.0.1:50887
+1613071777835	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--mute-audio" "-foreground" "-no-remote" "-profile" "C:\\Users\\Cameron\\AppData\\Local\\Temp\\rust_mozprofilevTIaRS"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613071779574	Marionette	INFO	Listening on port 50895
+1613071779893	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613071779904	Marionette	ERROR	[18] No reply from Marionette:Register
+1613071781554	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 225: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+1613071789529	Marionette	ERROR	[4294967303] No reply from Marionette:Register
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 225: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+1613071794426	Marionette	ERROR	[4294967307] No reply from Marionette:Register
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 225: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 225: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 225: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 453: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 225: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 225: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 453: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+1613071851748	Marionette	INFO	Stopped listening on port 50895
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1613071911199	geckodriver	INFO	Listening on 127.0.0.1:51045
+1613071914309	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--mute-audio" "-foreground" "-no-remote" "-profile" "C:\\Users\\Cameron\\AppData\\Local\\Temp\\rust_mozprofilepQ4V57"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613071916053	Marionette	INFO	Listening on port 51053
+1613071916357	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613071916367	Marionette	ERROR	[18] No reply from Marionette:Register
+1613071918054	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+1613071920775	Marionette	ERROR	[4294967302] No reply from Marionette:Register
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 225: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+1613071925079	Marionette	ERROR	[4294967305] No reply from Marionette:Register
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 225: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 225: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 225: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 225: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 453: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 453: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 453: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 225: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 225: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'PictureInPictureToggle' has been destroyed
+1613071992038	Marionette	INFO	Stopped listening on port 51053
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1613072014828	geckodriver	INFO	Listening on 127.0.0.1:51191
+1613072017901	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--mute-audio" "-foreground" "-no-remote" "-profile" "C:\\Users\\Cameron\\AppData\\Local\\Temp\\rust_mozprofilefJaD5N"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613072019135	Marionette	INFO	Listening on port 51199
+1613072019444	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613072019454	Marionette	ERROR	[18] No reply from Marionette:Register
+1613072021056	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/opx5ERcMHJe16-k0Z0uhxF7FXNF2rLCwkS-n9ofFqfI.js line 1 > eval line 5960 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/opx5ERcMHJe16-k0Z0uhxF7FXNF2rLCwkS-n9ofFqfI.js line 1 > eval line 5960 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1613072024012	Marionette	ERROR	[4294967302] No reply from Marionette:Register
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 225: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript warning: https://pagead2.googlesyndication.com/bg/opx5ERcMHJe16-k0Z0uhxF7FXNF2rLCwkS-n9ofFqfI.js line 1 > eval line 54 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/opx5ERcMHJe16-k0Z0uhxF7FXNF2rLCwkS-n9ofFqfI.js line 1 > eval line 54 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+1613072028108	Marionette	ERROR	[4294967305] No reply from Marionette:Register
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript warning: https://pagead2.googlesyndication.com/bg/opx5ERcMHJe16-k0Z0uhxF7FXNF2rLCwkS-n9ofFqfI.js line 1 > eval line 5144 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/opx5ERcMHJe16-k0Z0uhxF7FXNF2rLCwkS-n9ofFqfI.js line 1 > eval line 5144 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+1613072032871	Marionette	ERROR	[4294967309] No reply from Marionette:Register
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 453: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 225: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 453: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 453: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 453: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 225: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 453: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 225: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'PictureInPictureToggle' has been destroyed
+1613072096710	Marionette	INFO	Stopped listening on port 51199
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+1613072873622	geckodriver	INFO	Listening on 127.0.0.1:51442
+1613072876711	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--mute-audio" "-foreground" "-no-remote" "-profile" "C:\\Users\\Cameron\\AppData\\Local\\Temp\\rust_mozprofileGoeLED"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613072877862	Marionette	INFO	Listening on port 51450
+1613072878261	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613072878271	Marionette	ERROR	[18] No reply from Marionette:Register
+1613072879599	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 225: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wSDlzm44Tw92KsZzdz8Ism0icNLDPdmXdQGqhtcdkOM.js line 1 > eval line 4425 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wSDlzm44Tw92KsZzdz8Ism0icNLDPdmXdQGqhtcdkOM.js line 1 > eval line 4425 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+1613072886579	Marionette	ERROR	[4294967303] No reply from Marionette:Register
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wSDlzm44Tw92KsZzdz8Ism0icNLDPdmXdQGqhtcdkOM.js line 1 > eval line 6913 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wSDlzm44Tw92KsZzdz8Ism0icNLDPdmXdQGqhtcdkOM.js line 1 > eval line 6913 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+1613072891564	Marionette	ERROR	[4294967307] No reply from Marionette:Register
+JavaScript error: https://about.ubereats.com/us/en/c/eat-local/?utm_campaign=CM2070687-display-doubleclick_1_-99_US-National_e_all_bra_cpm_en_SB%7CEats%7CVideo%7CYT%7CQ121%7CQ%7CU2R0TIBE21-PO427845&utm_medium=display-programmatic&utm_source=dbm, line 11: TypeError: window.onerror is not a function
+JavaScript error: https://about.ubereats.com/us/en/c/eat-local/?utm_campaign=CM2070687-display-doubleclick_1_-99_US-National_e_all_bra_cpm_en_SB%7CEats%7CVideo%7CYT%7CQ121%7CQ%7CU2R0TIBE21-PO427845&utm_medium=display-programmatic&utm_source=dbm, line 11: TypeError: window.onerror is not a function
+JavaScript error: https://about.ubereats.com/us/en/c/eat-local/?utm_campaign=CM2070687-display-doubleclick_1_-99_US-National_e_all_bra_cpm_en_SB%7CEats%7CVideo%7CYT%7CQ121%7CQ%7CU2R0TIBE21-PO427845&utm_medium=display-programmatic&utm_source=dbm, line 11: TypeError: window.onerror is not a function
+JavaScript error: https://about.ubereats.com/us/en/c/eat-local/?utm_campaign=CM2070687-display-doubleclick_1_-99_US-National_e_all_bra_cpm_en_SB%7CEats%7CVideo%7CYT%7CQ121%7CQ%7CU2R0TIBE21-PO427845&utm_medium=display-programmatic&utm_source=dbm, line 11: TypeError: window.onerror is not a function
+JavaScript error: https://about.ubereats.com/us/en/c/eat-local/?utm_campaign=CM2070687-display-doubleclick_1_-99_US-National_e_all_bra_cpm_en_SB%7CEats%7CVideo%7CYT%7CQ121%7CQ%7CU2R0TIBE21-PO427845&utm_medium=display-programmatic&utm_source=dbm, line 11: TypeError: window.onerror is not a function
+JavaScript error: https://about.ubereats.com/us/en/c/eat-local/?utm_campaign=CM2070687-display-doubleclick_1_-99_US-National_e_all_bra_cpm_en_SB%7CEats%7CVideo%7CYT%7CQ121%7CQ%7CU2R0TIBE21-PO427845&utm_medium=display-programmatic&utm_source=dbm, line 11: TypeError: window.onerror is not a function
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wSDlzm44Tw92KsZzdz8Ism0icNLDPdmXdQGqhtcdkOM.js line 1 > eval line 4750 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/wSDlzm44Tw92KsZzdz8Ism0icNLDPdmXdQGqhtcdkOM.js line 1 > eval line 4750 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+1613072897283	Marionette	ERROR	[4294967310] No reply from Marionette:Register
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 225: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 453: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 453: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 225: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 453: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 225: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 453: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 453: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 569: TypeError: this.contentWindow is null
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 225: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'PictureInPictureToggle' has been destroyed
+1613072956250	Marionette	INFO	Stopped listening on port 51450
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
+JavaScript error: resource://gre/actors/PictureInPictureChild.jsm, line 299: InvalidStateError: JSWindowActorChild.contentWindow getter: Cannot access property 'contentWindow' after actor 'PictureInPictureToggle' has been destroyed
