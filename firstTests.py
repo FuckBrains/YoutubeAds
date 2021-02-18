@@ -17,7 +17,7 @@ import time
 import sys
 import re
 import pprint
-
+import csv
 
 def check_for_premium_ad(driver):
     try:
@@ -422,7 +422,7 @@ def main():
     video_id_matcher = "watch\?v=[-\w]+"
 
     options = webdriver.FirefoxOptions()
-    options.add_argument("-headless")
+    # options.add_argument("-headless")
     options.add_argument("--mute-audio")
 
     profile = webdriver.FirefoxProfile()
@@ -434,7 +434,8 @@ def main():
 
     base_url = 'https://www.youtube.com/watch?v='
 
-    video_list = ['KJ5UazhKXC8', 'FDEYHxtimKk', '0te6noMKffA', 'ownHh9QIsRk', 'tutZKLeGrCs', '0JW7_HRWahU', 'Pyzg3biuz1Q', 'P_6my53IlxY', 'O7cwFYAQvEU', 'JqhOPUVE9Os', '6lOgh8torPA', 'Ldc5aG_1Q7o', 'IZ_8b_Ydsv0', 'o27tIdYggY0', 'H6uBaP0KoWg']
+    video_list = ['KJ5UazhKXC8', 'FDEYHxtimKk', '0te6noMKffA']
+    # , 'ownHh9QIsRk', 'tutZKLeGrCs', '0JW7_HRWahU', 'Pyzg3biuz1Q', 'P_6my53IlxY', 'O7cwFYAQvEU', 'JqhOPUVE9Os', '6lOgh8torPA', 'Ldc5aG_1Q7o', 'IZ_8b_Ydsv0', 'o27tIdYggY0', 'H6uBaP0KoWg']
 
     data = []
 
@@ -479,9 +480,11 @@ def main():
 
         islive = check_live(driver)
 
-        title = get_title(driver)
+        title = get_title(driver).encode("utf-8", 'ignore').decode('utf-8','ignore')
 
         channelID, channelName = get_channel_info(driver)
+        channelID = channelID.encode("utf-8", 'ignore').decode('utf-8','ignore')
+        channelName = channelName.encode("utf-8", 'ignore').decode('utf-8','ignore')
 
         views = get_views(driver)
 
@@ -495,7 +498,13 @@ def main():
 
         descr, descrurls = get_description(driver)
 
+        descr = descr.encode("utf-8", 'ignore').decode('utf-8','ignore')
+        for i in range(len(descrurls)):
+            descrurls[i] = descrurls[i].encode("utf-8", 'ignore').decode('utf-8','ignore')
+
         dateuploaded, uploadts = get_upload_date(driver)
+
+        collection_time = int(time.time())
 
         
 
@@ -506,7 +515,7 @@ def main():
         # else:
         #     likes, dislikes, comments = 0, 0, 0
 
-        toStore = {
+        prerollStore = {
             'videoid' : video_id,
             'videoname' : title,
             'channelid' : channelID,
@@ -518,15 +527,34 @@ def main():
             'dislikes' : dislikes,
             'descr' : descr,
             'descrurls' : descrurls,
-            'preroll' : False,
-            'prerolladvertiser' : None,
-            'prerollfullurl' : None,
-            'prerolltargetinginfo' : None,
-            'banner' : False,
-            'banneradvertiser' : None,
-            'bannerfullurl' : None,
-            'bannertargetinginfo' : None,
-            'datecollected' : int(time.time()),
+            'ad_type' : "preroll",
+            'advertiser' : None,
+            'adfullurl' : None,
+            'targetinginfo' : None,
+            'datecollected' : collection_time,
+            'dateuploaded' : dateuploaded,
+            'uploadts' : uploadts,
+            'classification' : None,
+            'testid' : None
+        }
+
+        bannerStore = {
+            'videoid' : video_id,
+            'videoname' : title,
+            'channelid' : channelID,
+            'channelname' : channelName,
+            'islive' : islive,
+            'views' : views,
+            'comments' : comments,
+            'likes' : likes,
+            'dislikes' : dislikes,
+            'descr' : descr,
+            'descrurls' : descrurls,
+            'ad_type' : "banner",
+            'advertiser' : None,
+            'adfullurl' : None,
+            'targetinginfo' : None,
+            'datecollected' : collection_time,
             'dateuploaded' : dateuploaded,
             'uploadts' : uploadts,
             'classification' : None,
@@ -534,26 +562,30 @@ def main():
         }
 
         if preroll_info:
-            toStore['preroll'] = True
-            toStore['prerollAdvertiser'] = ad_url_base
-            toStore['prerollFullUrl'] = ad_url
-            toStore['prerollTargetingInfo'] = preroll_results
+            prerollStore['advertiser'] = ad_url_base
+            prerollStore['adfullurl'] = ad_url
+            prerollStore['targetinginfo'] = preroll_results
+            data.append(prerollStore)
 
         if banner_info:
-            toStore['banner'] = True
-            toStore['bannerAdvertiser'] = ad_url_base
-            toStore['bannerFullUrl'] = ad_url
-            toStore['bannerTargetingInfo'] = banner_results
+            bannerStore['advertiser'] = ad_url_base
+            bannerStore['adfullurl'] = ad_url
+            bannerStore['targetinginfo'] = preroll_results
+            data.append(bannerStore)
 
-
-        data.append(toStore)
+        if not (preroll_info or  banner_info):
+            data.append(prerollStore)
 
     pp = pprint.PrettyPrinter(indent = 4)
     pp.pprint(data)
 
     driver.quit()
 
-
+    keys = data[0].keys()
+    with open('youtube_ads.csv', 'w', newline='', encoding = 'utf-8')  as output_file:
+        dict_writer = csv.DictWriter(output_file, keys)
+        dict_writer.writeheader()
+        dict_writer.writerows(data)
 
 
         
