@@ -18,6 +18,7 @@ import sys
 import re
 import pprint
 import csv
+import random
 
 def check_for_premium_ad(driver):
     try:
@@ -320,13 +321,24 @@ def get_likes(driver):
         aria_label = container.get_attribute('aria-label')
         if aria_label is None:
             aria_label = container.text
+
+
         aria_label = aria_label.replace(',', '')
 
-        if 'dislike' in aria_label:
-            dislikes = int("".join(list(filter(str.isdigit, aria_label))))
-
+        if aria_label == "No dislikes":
+            dislikes = 0
+        elif aria_label == "No likes":
+            likes = 0
+        elif 'dislike' in aria_label:
+            try:
+                dislikes = int("".join(list(filter(str.isdigit, aria_label))))
+            except ValueError: 
+                dislikes = -1
         else:
-            likes = int("".join(list(filter(str.isdigit, aria_label))))
+            try:
+                likes = int("".join(list(filter(str.isdigit, aria_label))))
+            except ValueError:
+                likes = -1
 
 
     return likes, dislikes
@@ -402,6 +414,7 @@ def get_upload_date(driver):
     container = driver.find_element_by_xpath('//div[@id="date"]')
     date = container.find_element_by_xpath('.//yt-formatted-string[@class="style-scope ytd-video-primary-info-renderer"]').text
     date = removeprefix(date, "Started streaming on ")
+    date = removeprefix(date, "Streamed live on ")
     date = removeprefix(date, "Premiered ")
     date_time_object = datetime.datetime.strptime(date, '%b %d, %Y')
     
@@ -414,15 +427,51 @@ def check_live(driver):
     else:
         return False
 
+def check_removed(driver):
+    try:
+        container = driver.find_element_by_xpath('//div[@class="style-scope yt-player-error-message-renderer"]')
+        inner = container.find_element_by_xpath('.//div[@id="reason"]')
+        return True
+    except:
+        return False
+
+
+def get_video_list(filename, num_videos):
+    infile = open(filename, 'r')
+    video_list = []
+    for line in infile:
+        video_list.append(line.strip())
+
+    infile.close()
+
+    random.shuffle(video_list)
+
+    return video_list[:num_videos]
+
+def update_test_id():
+    test_file = open('test_id.txt', 'r')
+    for line in test_file:
+        test_num = int(line)
+    # test_num = int(test_file.readline())
+
+    test_file.close()
+
+    test_file = open('test_id.txt', 'w')
+    test_file.write(str(test_num + 1))
+    test_file.close()
+
+    return test_num + 1
 
 
 
 def main():
+    test_id = update_test_id()
+
     url_matcher = "^https?:\/\/[^#?\/]+"
     video_id_matcher = "watch\?v=[-\w]+"
 
     options = webdriver.FirefoxOptions()
-    # options.add_argument("-headless")
+    options.add_argument("-headless")
     options.add_argument("--mute-audio")
 
     profile = webdriver.FirefoxProfile()
@@ -434,18 +483,80 @@ def main():
 
     base_url = 'https://www.youtube.com/watch?v='
 
-    video_list = ['KJ5UazhKXC8', 'FDEYHxtimKk', '0te6noMKffA']
-    # , 'ownHh9QIsRk', 'tutZKLeGrCs', '0JW7_HRWahU', 'Pyzg3biuz1Q', 'P_6my53IlxY', 'O7cwFYAQvEU', 'JqhOPUVE9Os', '6lOgh8torPA', 'Ldc5aG_1Q7o', 'IZ_8b_Ydsv0', 'o27tIdYggY0', 'H6uBaP0KoWg']
+    sample_entry = {
+            'videoid' : None,
+            'videoname' : None,
+            'channelid' : None,
+            'channelname' : None,
+            'islive' : None,
+            'views' : None,
+            'comments' : None,
+            'likes' : None,
+            'dislikes' : None,
+            'descr' : None,
+            'descrurls' : None,
+            'ad_type' : None,
+            'advertiser' : None,
+            'adfullurl' : None,
+            'targetinginfo' : None,
+            'datecollected' : None,
+            'dateuploaded' : None,
+            'uploadts' : None,
+            'classification' : None,
+            'testid' : None,
+            'removed' : None
+    }
+
+    keys = sample_entry.keys()
+    output_file = open('youtube_ads.csv', 'w', newline='', encoding = 'utf-8') 
+    dict_writer = csv.DictWriter(output_file, keys)
+    dict_writer.writeheader()
+
+
+    # video_list = ['1KKUD7c8wo8', 'KJ5UazhKXC8', 'FDEYHxtimKk', '0te6noMKffA', 'ownHh9QIsRk', 'tutZKLeGrCs', '0JW7_HRWahU', 'Pyzg3biuz1Q', 'P_6my53IlxY', 'O7cwFYAQvEU', 'JqhOPUVE9Os', '6lOgh8torPA', 'Ldc5aG_1Q7o', 'IZ_8b_Ydsv0', 'o27tIdYggY0', 'H6uBaP0KoWg']
+    video_list = get_video_list('conspiracy_videos.txt', 10)
 
     data = []
+    count = 0
 
     for video_id in video_list:
+
+        collection_time = int(time.time())        
 
         driver.get(base_url + video_id)
 
         check_for_premium_ad(driver)
 
         played = play_video(driver)
+
+        removed = check_removed(driver)
+
+        if removed:
+            data.append({
+            'videoid' : video_id,
+            'videoname' : None,
+            'channelid' : None,
+            'channelname' : None,
+            'islive' : None,
+            'views' : None,
+            'comments' : None,
+            'likes' : None,
+            'dislikes' : None,
+            'descr' : None,
+            'descrurls' : None,
+            'ad_type' : None,
+            'advertiser' : None,
+            'adfullurl' : None,
+            'targetinginfo' : None,
+            'datecollected' : collection_time,
+            'dateuploaded' : None,
+            'uploadts' : None,
+            'classification' : None,
+            'testid' : test_id,
+            'removed' : True
+            })
+            continue
+
 
         # time.sleep(6)
 
@@ -504,17 +615,6 @@ def main():
 
         dateuploaded, uploadts = get_upload_date(driver)
 
-        collection_time = int(time.time())
-
-        
-
-        # if not live:
-        #     likes, dislikes = get_likes(driver)
-
-        #     comments = get_comment_count(driver)
-        # else:
-        #     likes, dislikes, comments = 0, 0, 0
-
         prerollStore = {
             'videoid' : video_id,
             'videoname' : title,
@@ -535,7 +635,8 @@ def main():
             'dateuploaded' : dateuploaded,
             'uploadts' : uploadts,
             'classification' : None,
-            'testid' : None
+            'testid' : test_id,
+            'removed' : False
         }
 
         bannerStore = {
@@ -558,8 +659,18 @@ def main():
             'dateuploaded' : dateuploaded,
             'uploadts' : uploadts,
             'classification' : None,
-            'testid' : None
-        }
+            'testid' : test_id,
+            'removed' : False
+        }        
+
+        # if not live:
+        #     likes, dislikes = get_likes(driver)
+
+        #     comments = get_comment_count(driver)
+        # else:
+        #     likes, dislikes, comments = 0, 0, 0
+
+        
 
         if preroll_info:
             prerollStore['advertiser'] = ad_url_base
@@ -576,16 +687,22 @@ def main():
         if not (preroll_info or  banner_info):
             data.append(prerollStore)
 
-    pp = pprint.PrettyPrinter(indent = 4)
-    pp.pprint(data)
+        count += 1
+        if ((count % 10) == 0):
+            dict_writer.writerows(data)
+            data = []
+
+
+    # pp = pprint.PrettyPrinter(indent = 4)
+    # pp.pprint(data)
+
+    dict_writer.writerows(data)
 
     driver.quit()
+    output_file.close()
 
-    keys = data[0].keys()
-    with open('youtube_ads.csv', 'w', newline='', encoding = 'utf-8')  as output_file:
-        dict_writer = csv.DictWriter(output_file, keys)
-        dict_writer.writeheader()
-        dict_writer.writerows(data)
+
+        
 
 
         
