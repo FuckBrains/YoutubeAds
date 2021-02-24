@@ -508,7 +508,7 @@ def main():
     }
 
     keys = sample_entry.keys()
-    output_file = open('youtube_ads.csv', 'w', newline='', encoding = 'utf-8') 
+    output_file = open('youtube_ads_test_' + str(test_id) + '.csv', 'w', newline='', encoding = 'utf-8') 
     dict_writer = csv.DictWriter(output_file, keys)
     dict_writer.writeheader()
 
