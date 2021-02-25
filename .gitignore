@@ -1,2 +1,4 @@
 *.exe
 geckodriver.log
+geckodriver
+
