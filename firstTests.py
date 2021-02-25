@@ -514,7 +514,7 @@ def main():
 
 
     # video_list = ['1KKUD7c8wo8', 'KJ5UazhKXC8', 'FDEYHxtimKk', '0te6noMKffA', 'ownHh9QIsRk', 'tutZKLeGrCs', '0JW7_HRWahU', 'Pyzg3biuz1Q', 'P_6my53IlxY', 'O7cwFYAQvEU', 'JqhOPUVE9Os', '6lOgh8torPA', 'Ldc5aG_1Q7o', 'IZ_8b_Ydsv0', 'o27tIdYggY0', 'H6uBaP0KoWg']
-    video_list = get_video_list('conspiracy_videos.txt', 500)
+    video_list = get_video_list('conspiracy_videos.txt', 11)
 
     data = []
     count = 0
