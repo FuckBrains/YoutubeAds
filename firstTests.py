@@ -262,6 +262,7 @@ def get_views(driver):
     container = driver.find_element_by_xpath('//span[@class="view-count style-scope yt-view-count-renderer"]')
     temp = removesuffix(container.text, ' views')
     temp = removesuffix(temp, ' watching now').replace(',', '')
+    temp = removesuffix(temp, ' view')
 
     return int(temp)
 
@@ -306,7 +307,8 @@ def get_comment_count(driver):
 
 
     # container = driver.find_element_by_xpath('//yt-formatted-string[@class="count-text style-scope ytd-comments-header-renderer"]')
-    return int(removesuffix(container.text, ' Comments').replace(',', ''))
+    return int("".join(list(filter(str.isdigit, container.text))))
+    # return int(removesuffix(container.text, ' Comments').replace(',', ''))
 
 def get_likes(driver):
     button_container = driver.find_element_by_xpath('//div[@id="top-level-buttons"]')
@@ -480,6 +482,8 @@ def main():
     driver = webdriver.Firefox(firefox_profile = profile, options = options)
     actions = ActionChains(driver)
 
+    print('driver launched successfuly')
+
 
     base_url = 'https://www.youtube.com/watch?v='
 
@@ -514,12 +518,15 @@ def main():
 
 
     # video_list = ['1KKUD7c8wo8', 'KJ5UazhKXC8', 'FDEYHxtimKk', '0te6noMKffA', 'ownHh9QIsRk', 'tutZKLeGrCs', '0JW7_HRWahU', 'Pyzg3biuz1Q', 'P_6my53IlxY', 'O7cwFYAQvEU', 'JqhOPUVE9Os', '6lOgh8torPA', 'Ldc5aG_1Q7o', 'IZ_8b_Ydsv0', 'o27tIdYggY0', 'H6uBaP0KoWg']
-    video_list = get_video_list('conspiracy_videos.txt', 11)
+    
+    video_list = get_video_list('conspiracy_videos.txt', 10)
+    print("got video list")
 
     data = []
     count = 0
 
     for video_id in video_list:
+        print('checking video ' + video_id)
 
         collection_time = int(time.time())        
 
@@ -695,6 +702,8 @@ def main():
 
     # pp = pprint.PrettyPrinter(indent = 4)
     # pp.pprint(data)
+
+    print('shutting down')
 
     dict_writer.writerows(data)
 
