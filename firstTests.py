@@ -77,8 +77,8 @@ def check_banner_info(driver):
 
     try:
         buttons = driver.find_elements_by_xpath('//span[@class="ytp-ad-button-icon"]')
-        for item in buttons:
-            print(item)
+        # for item in buttons:
+        #     print(item)
         if len(buttons) > 1:
             banner_info = buttons[1]
 
@@ -143,8 +143,8 @@ def play_video(driver):
         play_button.click()
 
     except Exception as e:
-        print(e)
-        print('playing video failed')
+        # print(e)
+        # print('playing video failed')
         return 0
 
     return 1
@@ -183,7 +183,7 @@ def get_banner_advertiser(driver):
 
 def scroll_to_find_video(driver, video_index):
     videos = driver.find_elements_by_xpath("//a[@id='video-title']")
-    print('scrolling')
+    # print('scrolling')
     try:
         WebDriverWait(driver, 2).until(EC.visibility_of(videos[video_index]))
         found = True
@@ -195,19 +195,19 @@ def scroll_to_find_video(driver, video_index):
 
     # Get scroll height
     last_height = driver.execute_script("return document.documentElement.scrollHeight")
-    print(last_height)
+    # print(last_height)
 
     while not found:
-        print('in scroll loop')
+        # print('in scroll loop')
         # Scroll down to bottom
         driver.execute_script("window.scrollTo(0, " + str(last_height) + ");")
-        print('scrolled')
+        # print('scrolled')
         # Wait to load page
         time.sleep(SCROLL_PAUSE_TIME)
 
         # Calculate new scroll height and compare with last scroll height
         new_height = driver.execute_script("return document.documentElement.scrollHeight")
-        print(new_height)
+        # print(new_height)
         if new_height == last_height:
             break
         last_height = new_height
@@ -218,7 +218,7 @@ def scroll_to_find_video(driver, video_index):
             WebDriverWait(driver, 2).until(EC.visibility_of(
                 videos[video_index]))
             found = True
-            print('found video')
+            # print('found video')
         except:
             found = False        
 
@@ -278,23 +278,23 @@ def get_comment_count(driver):
             # WebDriverWait(driver, 2).until(EC.presence_of_element_located(By.XPATH, '//yt-formatted-string[@class="count-text style-scope ytd-comments-header-renderer"]'))
             container = driver.find_element_by_xpath('//yt-formatted-string[@class="count-text style-scope ytd-comments-header-renderer"]')
             found = True
-            print('found comments')
+            # print('found comments')
         except:
             found = False
 
         if not found:
-            print('in scroll loop')
+            # print('in scroll loop')
             # Scroll down to bottom
             driver.execute_script("window.scrollTo(0, " + str(last_height/4) + ");")
-            print('scrolled')
+            # print('scrolled')
             # Wait to load page
             time.sleep(SCROLL_PAUSE_TIME)
 
             # Calculate new scroll height and compare with last scroll height
             new_height = driver.execute_script("return document.documentElement.scrollHeight")
 
-            print(last_height)
-            print(new_height)    
+            # print(last_height)
+            # print(new_height)    
 
             if (new_height == last_height) and count > 3:
                 return -1
