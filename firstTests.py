@@ -499,7 +499,7 @@ def main():
             'dislikes' : None,
             'descr' : None,
             'descrurls' : None,
-            'ad_type' : None,
+            'adtype' : None,
             'advertiser' : None,
             'adfullurl' : None,
             'targetinginfo' : None,
@@ -551,7 +551,7 @@ def main():
             'dislikes' : None,
             'descr' : None,
             'descrurls' : None,
-            'ad_type' : None,
+            'adtype' : None,
             'advertiser' : None,
             'adfullurl' : None,
             'targetinginfo' : None,
@@ -634,7 +634,7 @@ def main():
             'dislikes' : dislikes,
             'descr' : descr,
             'descrurls' : descrurls,
-            'ad_type' : "preroll",
+            'adtype' : "preroll",
             'advertiser' : None,
             'adfullurl' : None,
             'targetinginfo' : None,
@@ -658,7 +658,7 @@ def main():
             'dislikes' : dislikes,
             'descr' : descr,
             'descrurls' : descrurls,
-            'ad_type' : "banner",
+            'adtype' : "banner",
             'advertiser' : None,
             'adfullurl' : None,
             'targetinginfo' : None,
@@ -692,7 +692,7 @@ def main():
             data.append(bannerStore)
 
         if not (preroll_info or  banner_info):
-            preroll_store['ad_type'] = None
+            prerollStore['adtype'] = None
             data.append(prerollStore)
 
         count += 1
