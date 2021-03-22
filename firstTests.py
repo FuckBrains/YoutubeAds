@@ -11,6 +11,8 @@ from selenium.common.exceptions import StaleElementReferenceException
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import TimeoutException
 
+from selenium.webdriver.common.keys import Keys
+
 
 import datetime
 import time
@@ -19,14 +21,6 @@ import re
 import pprint
 import csv
 import random
-
-def check_for_premium_ad(driver):
-    try:
-        skip_button = driver.find_element_by_xpath('//yt-formatted-string[text()="Skip trial"]')
-        skip_button.click()
-    except:
-        pass
-
 
 def check_preroll_info(driver):
     preroll_info = None
@@ -41,10 +35,30 @@ def check_preroll_info(driver):
 
 def check_for_premium_ad(driver):
     try:
-        skip_button = driver.find_element_by_xpath('//yt-formatted-string[text()="Skip trial"]')
+        # print('check 1')
+        skip_button = driver.find_element_by_xpath('//ytd-button-renderer[@id="dismiss-button"]')
+        skip_button = skip_button.find_element_by_xpath('//paper_button[@id="button"]')
         skip_button.click()
-    except:
+        # print('clicked')
+    except Exception as e:
+        # print(e)
         pass
+
+    # try:
+    #     print('check 1')
+    #     skip_button = driver.find_element_by_xpath('//yt-formatted-string[text()="Skip trial"]')
+    #     skip_button.click()
+
+    # except:
+    #     print('excepted')
+    #     try:
+    #         print('check 2')
+    #         skip_button = driver.find_element_by_xpath('//yt-formatted-string[text()="No thanks"]')
+    #         skip_button.click()
+    #     except Exception as e:
+    #         print(e)
+    #         pass
+    #     pass
 
 # def check_number_of_ads(driver):
 #     try:
@@ -259,7 +273,7 @@ def get_channel_info(driver):
     return ID, channel.text
 
 def get_views(driver):
-    container = driver.find_element_by_xpath('//span[@class="view-count style-scope yt-view-count-renderer"]')
+    container = driver.find_element_by_xpath('//span[@class="view-count style-scope ytd-video-view-count-renderer"]')
     temp = removesuffix(container.text, ' views')
     temp = removesuffix(temp, ' watching now').replace(',', '')
     temp = removesuffix(temp, ' view')
@@ -423,7 +437,7 @@ def get_upload_date(driver):
     return date, int(date_time_object.timestamp())
 
 def check_live(driver):
-    container = driver.find_element_by_xpath('//span[@class="view-count style-scope yt-view-count-renderer"]')
+    container = driver.find_element_by_xpath('//span[@class="view-count style-scope ytd-video-view-count-renderer"]')
     if 'watching now' in container.text:
         return True
     else:
@@ -464,6 +478,28 @@ def update_test_id():
 
     return test_num + 1
 
+def youtube_login(driver, username, password):
+    signinurl = "https://accounts.google.com/signin/v2/identifier?service=youtube"
+    driver.get(signinurl)
+
+    uEntry = driver.find_element_by_id("identifierId")
+    uEntry.clear()
+    uEntry.send_keys(username)
+
+    nextButton = driver.find_element_by_xpath('//span[text()="Next"]')
+    nextButton = nextButton.find_element_by_xpath('./..')
+    nextButton.click()
+
+    # WebDriverWait(driver, 4).until(EC.presence_of_element_located((By.XPATH, '//input[@type="password"]')))
+    WebDriverWait(driver, 4).until(EC.presence_of_element_located((By.ID, 'password')))
+    pEntry = driver.find_element_by_id("password")
+    pEntry = pEntry.find_element_by_xpath('.//input[@type="password"]')
+    pEntry.clear()
+    pEntry.send_keys(password)
+    time.sleep(1)
+    pEntry.send_keys(Keys.RETURN)
+    time.sleep(2)
+
 
 
 def main():
@@ -473,7 +509,7 @@ def main():
     video_id_matcher = "watch\?v=[-\w]+"
 
     options = webdriver.FirefoxOptions()
-    options.add_argument("-headless")
+    # options.add_argument("-headless")
     options.add_argument("--mute-audio")
 
     profile = webdriver.FirefoxProfile()
@@ -484,6 +520,10 @@ def main():
 
     print('driver launched successfuly')
 
+    username = "csismymajor4444"
+    password = "N01pbl0ckpls!!"
+    youtube_login(driver, username, password)
+    print('logged into account ' + username)
 
     base_url = 'https://www.youtube.com/watch?v='
 
@@ -535,6 +575,8 @@ def main():
         check_for_premium_ad(driver)
 
         played = play_video(driver)
+
+        check_for_premium_ad(driver)
 
         removed = check_removed(driver)
 
@@ -596,15 +638,19 @@ def main():
         else:
             ad_url_base = None
 
+        check_for_premium_ad(driver)
+
         islive = check_live(driver)
 
         title = get_title(driver).encode("utf-8", 'ignore').decode('utf-8','ignore')
-
+    
         channelID, channelName = get_channel_info(driver)
         channelID = channelID.encode("utf-8", 'ignore').decode('utf-8','ignore')
         channelName = channelName.encode("utf-8", 'ignore').decode('utf-8','ignore')
-
+        
+        
         views = get_views(driver)
+        
 
         if islive:
             likes, dislikes, comments = -1, -1, -1
