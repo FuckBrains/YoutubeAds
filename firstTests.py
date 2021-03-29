@@ -44,30 +44,6 @@ def check_for_premium_ad(driver):
         # print(e)
         pass
 
-    # try:
-    #     print('check 1')
-    #     skip_button = driver.find_element_by_xpath('//yt-formatted-string[text()="Skip trial"]')
-    #     skip_button.click()
-
-    # except:
-    #     print('excepted')
-    #     try:
-    #         print('check 2')
-    #         skip_button = driver.find_element_by_xpath('//yt-formatted-string[text()="No thanks"]')
-    #         skip_button.click()
-    #     except Exception as e:
-    #         print(e)
-    #         pass
-    #     pass
-
-# def check_number_of_ads(driver):
-#     try:
-#         ad_badge = driver.find_element_by_xpath('//[text()="Ad 1 of"]')
-#         print("found multiple ads")
-#         print(ad_badge.getText())
-#     except:
-#         pass
-
 def check_preroll_or_banner(driver):
     try:
         pass
@@ -478,6 +454,15 @@ def update_test_id():
 
     return test_num + 1
 
+
+def get_test_id():
+    d = datetime.datetime.now()
+    test_str = '{date:%Y_%m_%d_%H_%M_%S}'.format(date = d)
+    test_id = int('{date:%Y%m%d%H%M%S}'.format(date = d))
+
+    return test_id, test_str
+
+
 def youtube_login(driver, username, password):
     signinurl = "https://accounts.google.com/signin/v2/identifier?service=youtube"
     driver.get(signinurl)
@@ -503,7 +488,7 @@ def youtube_login(driver, username, password):
 
 
 def main():
-    test_id = update_test_id()
+    test_id, test_str = get_test_id()
 
     url_matcher = "^https?:\/\/[^#?\/]+"
     video_id_matcher = "watch\?v=[-\w]+"
@@ -552,14 +537,14 @@ def main():
     }
 
     keys = sample_entry.keys()
-    output_file = open('youtube_ads_test_' + str(test_id) + '.csv', 'w', newline='', encoding = 'utf-8') 
+    output_file = open(test_str + '.csv', 'w', newline='', encoding = 'utf-8') 
     dict_writer = csv.DictWriter(output_file, keys)
     dict_writer.writeheader()
 
 
     # video_list = ['1KKUD7c8wo8', 'KJ5UazhKXC8', 'FDEYHxtimKk', '0te6noMKffA', 'ownHh9QIsRk', 'tutZKLeGrCs', '0JW7_HRWahU', 'Pyzg3biuz1Q', 'P_6my53IlxY', 'O7cwFYAQvEU', 'JqhOPUVE9Os', '6lOgh8torPA', 'Ldc5aG_1Q7o', 'IZ_8b_Ydsv0', 'o27tIdYggY0', 'H6uBaP0KoWg']
     
-    video_list = get_video_list('conspiracy_videos.txt', 1000)
+    video_list = get_video_list('conspiracy_videos.txt', 100)
     print("got video list")
 
     data = []
@@ -665,6 +650,7 @@ def main():
         descr = descr.encode("utf-8", 'ignore').decode('utf-8','ignore')
         for i in range(len(descrurls)):
             descrurls[i] = descrurls[i].encode("utf-8", 'ignore').decode('utf-8','ignore')
+        descrurls = "&&&&".join(descrurls)
 
         dateuploaded, uploadts = get_upload_date(driver)
 
@@ -723,7 +709,8 @@ def main():
         # else:
         #     likes, dislikes, comments = 0, 0, 0
 
-        
+        if preroll_info:
+            preroll_results = "&&&&".join(preroll_results)
 
         if preroll_info:
             prerollStore['advertiser'] = ad_url_base

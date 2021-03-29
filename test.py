@@ -1,1 +1,6 @@
-print(int("".join(list(filter(str.isdigit, '24,235 likes')))))
+import datetime
+
+descrurls = []
+descrurls = "&&&&".join(descrurls)
+
+print(descrurls)
