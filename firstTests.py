@@ -494,7 +494,7 @@ def main():
     video_id_matcher = "watch\?v=[-\w]+"
 
     options = webdriver.FirefoxOptions()
-    # options.add_argument("-headless")
+    options.add_argument("-headless")
     options.add_argument("--mute-audio")
 
     profile = webdriver.FirefoxProfile()
