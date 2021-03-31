@@ -1,3 +1,18 @@
-2021/03/31-15:57:03.676 6acc Reusing MANIFEST C:\Users\Cameron\Desktop\User Data\Default\IndexedDB\https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
-2021/03/31-15:57:03.676 6acc Recovering log #3
-2021/03/31-15:57:03.680 6acc Reusing old log C:\Users\Cameron\Desktop\User Data\Default\IndexedDB\https_www.youtube.com_0.indexeddb.leveldb/000003.log 
+2021/03/31-20:26:16.543 c8c Reusing MANIFEST /home/clb478/YoutubeAds/User Data/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/03/31-20:26:16.543 c8c Recovering log #3
+2021/03/31-20:26:16.549 c8c Reusing old log /home/clb478/YoutubeAds/User Data/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000003.log 
+2021/03/31-20:30:55.384 c93 Level-0 table #5: started
+2021/03/31-20:30:55.408 c93 Level-0 table #5: 1053369 bytes OK
+2021/03/31-20:30:55.412 c93 Delete type=0 #3
+2021/03/31-20:32:02.559 c8c Level-0 table #7: started
+2021/03/31-20:32:02.567 c8c Level-0 table #7: 156447 bytes OK
+2021/03/31-20:32:02.571 c8c Delete type=0 #4
+2021/03/31-20:32:02.571 c8c Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/03/31-20:32:02.571 c8c Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x02\x01\x1f\x04\x04\x01\x06\x00Q\x00U\x00E\x00U\x00E\x00D\x01(\x00B\x00F\x002\x001\x00A\x009\x00E\x008\x00F\x00B\x00C\x005\x00A\x003\x008\x004\x006\x00F\x00B\x000\x005\x00B\x004\x00F\x00A\x000\x008\x005\x009\x00E\x000\x009\x001\x007\x00B\x002\x002\x000\x002\x00F\x03\x00\x00\x00\x00\x00\x00\xf0?\x03\xb8ZO\xc4\x9f\x88wB\x00\x03\x00\x00\x00\x00\x00\x80`@' @ 6817 : 1
+2021/03/31-20:32:02.571 c8c Compacting 1@1 + 1@2 files
+2021/03/31-20:32:02.579 c8c Generated table #8@1: 139 keys, 5197 bytes
+2021/03/31-20:32:02.579 c8c Compacted 1@1 + 1@2 files => 5197 bytes
+2021/03/31-20:32:02.582 c8c compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/03/31-20:32:02.582 c8c Delete type=2 #5
+2021/03/31-20:32:02.582 c8c Delete type=2 #7
+2021/03/31-20:32:02.583 c8c Manual compaction at level-1 from '\x00\x02\x01\x1f\x04\x04\x01\x06\x00Q\x00U\x00E\x00U\x00E\x00D\x01(\x00B\x00F\x002\x001\x00A\x009\x00E\x008\x00F\x00B\x00C\x005\x00A\x003\x008\x004\x006\x00F\x00B\x000\x005\x00B\x004\x00F\x00A\x000\x008\x005\x009\x00E\x000\x009\x001\x007\x00B\x002\x002\x000\x002\x00F\x03\x00\x00\x00\x00\x00\x00\xf0?\x03\xb8ZO\xc4\x9f\x88wB\x00\x03\x00\x00\x00\x00\x00\x80`@' @ 6817 : 1 .. (end); will stop at (end)

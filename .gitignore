@@ -2,5 +2,7 @@
 geckodriver.log
 geckodriver
 
+**/User Data/
+
 **/__pycache__
 *.csv
