@@ -483,8 +483,11 @@ def main():
     video_id_matcher = "watch\?v=[-\w]+"
 
     options = webdriver.ChromeOptions()
+    options.add_argument("--no-sandbox")
     options.add_argument("-headless")
     options.add_argument("--mute-audio")
+    options.add_argument("--disable-gpu")
+    options.add_argument("--disable-dev-shm-usage")
     options.add_argument("user-data-dir=User Data")
 
     # profile = webdriver.FirefoxProfile()
