@@ -485,7 +485,7 @@ def main():
     options = webdriver.ChromeOptions()
     options.add_argument("-headless")
     options.add_argument("--mute-audio")
-    options.add_argument("user-data-dir=C:\\Users\\Cameron\\Desktop\\User Data")
+    options.add_argument("user-data-dir=User Data")
 
     # profile = webdriver.FirefoxProfile()
     # profile.set_preference("media.volume_scale", "0.0");
