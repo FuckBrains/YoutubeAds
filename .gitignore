@@ -2,3 +2,5 @@
 geckodriver.log
 geckodriver
 
+**/__pycache__
+*.csv

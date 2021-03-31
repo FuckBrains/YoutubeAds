@@ -22,16 +22,6 @@ import pprint
 import csv
 import random
 
-def check_preroll_info(driver):
-    preroll_info = None
-
-    try:
-        preroll_info = WebDriverWait(driver, 2).until(EC.element_to_be_clickable(
-            (By.XPATH, "//span[@class='ytp-ad-button-icon']")))
-    except TimeoutException:
-        pass
-
-    return preroll_info
 
 def check_for_premium_ad(driver):
     try:
@@ -427,7 +417,6 @@ def check_removed(driver):
     except:
         return False
 
-
 def get_video_list(filename, num_videos):
     infile = open(filename, 'r')
     video_list = []
@@ -493,47 +482,48 @@ def main():
     url_matcher = "^https?:\/\/[^#?\/]+"
     video_id_matcher = "watch\?v=[-\w]+"
 
-    options = webdriver.FirefoxOptions()
+    options = webdriver.ChromeOptions()
     options.add_argument("-headless")
     options.add_argument("--mute-audio")
+    options.add_argument("user-data-dir=C:\\Users\\Cameron\\Desktop\\User Data")
 
-    profile = webdriver.FirefoxProfile()
-    profile.set_preference("media.volume_scale", "0.0");
+    # profile = webdriver.FirefoxProfile()
+    # profile.set_preference("media.volume_scale", "0.0");
 
-    driver = webdriver.Firefox(firefox_profile = profile, options = options)
+    driver = webdriver.Chrome(options = options)
     actions = ActionChains(driver)
 
     print('driver launched successfuly')
 
     username = "csismymajor4444"
     password = "N01pbl0ckpls!!"
-    youtube_login(driver, username, password)
-    print('logged into account ' + username)
+    # youtube_login(driver, username, password)
+    # print('logged into account ' + username)
 
     base_url = 'https://www.youtube.com/watch?v='
 
     sample_entry = {
-            'videoid' : None,
-            'videoname' : None,
-            'channelid' : None,
-            'channelname' : None,
-            'islive' : None,
-            'views' : None,
-            'comments' : None,
-            'likes' : None,
-            'dislikes' : None,
-            'descr' : None,
-            'descrurls' : None,
-            'adtype' : None,
-            'advertiser' : None,
-            'adfullurl' : None,
-            'targetinginfo' : None,
-            'datecollected' : None,
-            'dateuploaded' : None,
-            'uploadts' : None,
-            'classification' : None,
-            'testid' : None,
-            'removed' : None
+        'videoid' : None,
+        'videoname' : None,
+        'channelid' : None,
+        'channelname' : None,
+        'islive' : None,
+        'views' : None,
+        'comments' : None,
+        'likes' : None,
+        'dislikes' : None,
+        'descr' : None,
+        'descrurls' : None,
+        'adtype' : None,
+        'advertiser' : None,
+        'adfullurl' : None,
+        'targetinginfo' : None,
+        'datecollected' : None,
+        'dateuploaded' : None,
+        'uploadts' : None,
+        'classification' : None,
+        'testid' : None,
+        'removed' : None
     }
 
     keys = sample_entry.keys()
@@ -594,8 +584,8 @@ def main():
 
         # time.sleep(6)
 
-        if not played:
-            continue
+        # if not played:
+        #     continue
 
         results = []
         ad_url = None
@@ -724,7 +714,7 @@ def main():
             bannerStore['targetinginfo'] = preroll_results
             data.append(bannerStore)
 
-        if not (preroll_info or  banner_info):
+        if not (preroll_info or banner_info):
             prerollStore['adtype'] = None
             data.append(prerollStore)
 
