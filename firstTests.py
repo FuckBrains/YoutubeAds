@@ -483,12 +483,17 @@ def main():
     video_id_matcher = "watch\?v=[-\w]+"
 
     options = webdriver.ChromeOptions()
-    options.add_argument("--no-sandbox")
+    options.add_argument("start-maximized")
+    # options.add_argument("disable-infobars")
+    # options.add_argument("--disable-extensions")
+    # options.add_argument("--disable-gpu") 
+    # options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--no-sandbox") 
     options.add_argument("--headless")
     options.add_argument("--mute-audio")
-    options.add_argument("--disable-gpu")
-    options.add_argument("--disable-dev-shm-usage")
-    options.add_argument("user-data-dir=User Data")
+    # options.add_argument("--disable-gpu")
+    # options.add_argument("--disable-dev-shm-usage")
+    # options.add_argument("user-data-dir=User Data")
 
     # profile = webdriver.FirefoxProfile()
     # profile.set_preference("media.volume_scale", "0.0");
@@ -553,6 +558,7 @@ def main():
         check_for_premium_ad(driver)
 
         played = play_video(driver)
+        print('after played')
 
         check_for_premium_ad(driver)
 
@@ -595,10 +601,11 @@ def main():
         preroll_info = None
         banner_info = None
 
-
+        print('checking ad')
         preroll_info = check_preroll_info(driver)
 
         if preroll_info is not None:
+            print('found ad')
             preroll_results = get_ad_info(driver, preroll_info)
             ad_url = get_preroll_advertiser(driver)
 
@@ -618,15 +625,18 @@ def main():
 
         check_for_premium_ad(driver)
 
+        print('check live')
         islive = check_live(driver)
 
+        print('check title')
         title = get_title(driver).encode("utf-8", 'ignore').decode('utf-8','ignore')
     
+        print('channel info')
         channelID, channelName = get_channel_info(driver)
         channelID = channelID.encode("utf-8", 'ignore').decode('utf-8','ignore')
         channelName = channelName.encode("utf-8", 'ignore').decode('utf-8','ignore')
         
-        
+        print('views')
         views = get_views(driver)
         
 
@@ -634,10 +644,12 @@ def main():
             likes, dislikes, comments = -1, -1, -1
 
         else:
+            print('likes')
             likes, dislikes = get_likes(driver)
-
+            print('comments')
             comments = get_comment_count(driver)
 
+        print('descr')
         descr, descrurls = get_description(driver)
 
         descr = descr.encode("utf-8", 'ignore').decode('utf-8','ignore')
@@ -645,6 +657,7 @@ def main():
             descrurls[i] = descrurls[i].encode("utf-8", 'ignore').decode('utf-8','ignore')
         descrurls = "&&&&".join(descrurls)
 
+        print('date')
         dateuploaded, uploadts = get_upload_date(driver)
 
         prerollStore = {
