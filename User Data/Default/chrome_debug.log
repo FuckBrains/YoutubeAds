@@ -1,8 +1,0 @@
-[0331/224346.432535:ERROR:service_worker_storage.cc(1966)] Failed to delete the database: Database IO error
-[0331/224354.396175:ERROR:database.cc(1707)] Quota sqlite error 5, errno 0: database is locked, sql: PRAGMA auto_vacuum
-[0331/224354.396220:ERROR:database.cc(1707)] Quota sqlite error 5, errno 0: database is locked, sql: PRAGMA journal_mode=TRUNCATE
-[0331/224354.396250:ERROR:database.cc(1707)] Quota sqlite error 5, errno 0: database is locked, sql: SELECT 1 FROM sqlite_master WHERE type=? AND name=?
-[0331/224354.396300:ERROR:database.cc(1707)] Quota sqlite error 5, errno 0: database is locked, sql: SELECT 1 FROM sqlite_master WHERE type=? AND name=?
-[0331/224354.396327:ERROR:database.cc(1707)] Quota sqlite error 5, errno 0: database is locked, sql: SELECT 1 FROM sqlite_master WHERE type=? AND name=?
-[0331/224354.396342:ERROR:database.cc(1707)] Quota sqlite error 5, errno 0: database is locked, sql: CREATE TABLE meta(key LONGVARCHAR NOT NULL UNIQUE PRIMARY KEY, value LONGVARCHAR)
-[0331/224354.396354:ERROR:quota_database.cc(582)] Could not open the quota database, resetting.
