@@ -28,9 +28,10 @@ def main():
     # Gen test ID and default config
     testid, test_str = get_test_id()
     config = {
-        'headless' : False,
+        'headless' : True,
+        'browser' : 'chrome',
         'mute' : True,
-        'numvideos' : 1000,
+        'numvideos' : 10000,
         'iofreq' : 10,
         'username' : "csismymajor4444",
         'password' : "N01pbl0ckpls!!"
@@ -39,23 +40,38 @@ def main():
     # ARG PARSE GOES HERE
 
     # Driver setup 
-    options = webdriver.FirefoxOptions()
-    if config['headless']:
-        options.add_argument("-headless")
-    if config['mute']:
-        options.add_argument("--mute-audio")
+    if config['browser'] == 'firefox':
+        options = webdriver.FirefoxOptions()
+        if config['headless']:
+            options.add_argument("-headless")
+        if config['mute']:
+            options.add_argument("--mute-audio")
 
-    profile = webdriver.FirefoxProfile()
-    if config['mute']:
-        profile.set_preference("media.volume_scale", "0.0");
+        profile = webdriver.FirefoxProfile()
+        if config['mute']:
+            profile.set_preference("media.volume_scale", "0.0");
 
-    driver = webdriver.Firefox(firefox_profile = profile, options = options)
+        driver = webdriver.Firefox(firefox_profile = profile, options = options)
+
+    elif config['browser'] == 'chrome':
+        options = webdriver.ChromeOptions()
+        options.add_argument("--window-size=1920,1080")
+        # options.add_argument("--no-sandbox")
+        if config['headless']:
+            options.add_argument("--headless")
+        if config['mute']:
+            options.add_argument("--mute-audio")
+        options.add_argument("user-data-dir=User Data")
+        driver = webdriver.Chrome(options = options)
+        
+
     actions = ActionChains(driver)
     print('driver launched successfuly')
 
-    # Login to account
-    youtube_login(driver, config['username'], config['password'])
-    print('logged into account ' + config['username'])
+    if config['browser'] == 'firefox':
+        # Login to account
+        youtube_login(driver, config['username'], config['password'])
+        print('logged into account ' + config['username'])
 
     # Setup output file
     keys = sample_entry.keys()
@@ -101,7 +117,7 @@ def main():
             continue
 
 
-        if not played:
+        if ((config['browser'] == 'firefox') and (not played)):
             print('Video not played')
             continue
 
