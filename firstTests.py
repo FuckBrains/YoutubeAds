@@ -483,7 +483,7 @@ def main():
     video_id_matcher = "watch\?v=[-\w]+"
 
     options = webdriver.ChromeOptions()
-    options.add_argument("start-maximized")
+    options.add_argument("--window-size=1920,1080")
     # options.add_argument("disable-infobars")
     # options.add_argument("--disable-extensions")
     # options.add_argument("--disable-gpu") 

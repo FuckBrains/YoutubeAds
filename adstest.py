@@ -31,7 +31,7 @@ def main():
         'headless' : False,
         'browser' : 'chrome',
         'mute' : True,
-        'numvideos' : 10000,
+        'numvideos' : 1000,
         'iofreq' : 10,
         'username' : "csismymajor4444",
         'password' : "N01pbl0ckpls!!"
@@ -63,7 +63,7 @@ def main():
             options.add_argument("--mute-audio")
         # options.add_argument("user-data-dir=User Data")
         driver = webdriver.Chrome(options = options)
-        
+
 
     actions = ActionChains(driver)
     print('driver launched successfuly')
@@ -120,7 +120,8 @@ def main():
         if ((config['browser'] == 'firefox') and (not played)):
             print('Video not played')
             continue
-
+        
+        check_for_premium_ad(driver)
         # Check for ads, returns None for each variable if no ad found
         results, adurl, adbaseurl, adtype = check_for_ads(driver)
 
