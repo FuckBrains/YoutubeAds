@@ -61,7 +61,7 @@ def main():
             options.add_argument("--headless")
         if config['mute']:
             options.add_argument("--mute-audio")
-        options.add_argument("user-data-dir=User Data")
+        #options.add_argument("user-data-dir=User Data")
         driver = webdriver.Chrome(options = options)
 
 
@@ -93,7 +93,10 @@ def main():
 
         # Load video
         driver.get(base_url + videoid)
+        element_present = EC.presence_of_element_located((By.ID, 'info-contents'))
+        WebDriverWait(driver, 5).until(element_present)
         print(driver.title)
+
 
         # This function dismisses the premium ad popup, gets called a few times
         check_for_premium_ad(driver)
