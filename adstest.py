@@ -28,7 +28,7 @@ def main():
     # Gen test ID and default config
     testid, test_str = get_test_id()
     config = {
-        'headless' : True,
+        'headless' : False,
         'browser' : 'chrome',
         'mute' : True,
         'numvideos' : 1000,
@@ -61,7 +61,7 @@ def main():
             options.add_argument("--headless")
         if config['mute']:
             options.add_argument("--mute-audio")
-        options.add_argument("user-data-dir=User Data")
+        # options.add_argument("user-data-dir=User Data")
         driver = webdriver.Chrome(options = options)
 
 
