@@ -85,6 +85,9 @@ def main():
 
     data = []
     count = 0
+
+    driver.get("youtube.com")
+
     for videoid in video_list:
         print('checking video ' + videoid)
 
