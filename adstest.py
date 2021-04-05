@@ -61,7 +61,7 @@ def main():
             options.add_argument("--headless")
         if config['mute']:
             options.add_argument("--mute-audio")
-        options.add_argument("user-data-dir=User Data")
+        # options.add_argument("user-data-dir=User Data")
         driver = webdriver.Chrome(options = options)
 
 

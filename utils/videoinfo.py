@@ -22,7 +22,13 @@ from utils.driverhelpers import *
 
 
 def check_live(driver):
-    container = driver.find_element_by_xpath('//span[@class="view-count style-scope ytd-video-view-count-renderer"]')
+    try:
+        container = driver.find_element_by_xpath('//span[@class="view-count style-scope ytd-video-view-count-renderer"]')
+    except Exception as e:
+        print('error in live check')
+        print(e)
+        return False
+
     if 'watching now' in container.text:
         return True
     else:
