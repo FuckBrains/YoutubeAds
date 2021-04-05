@@ -93,6 +93,7 @@ def main():
 
         # Load video
         driver.get(base_url + videoid)
+        print(driver.title)
 
         # This function dismisses the premium ad popup, gets called a few times
         check_for_premium_ad(driver)
