@@ -43,9 +43,10 @@ def check_for_premium_ad(driver):
         skip_button = driver.find_element_by_xpath('//ytd-button-renderer[@id="dismiss-button"]')
         skip_button = skip_button.find_element_by_xpath('//paper_button[@id="button"]')
         skip_button.click()
-        # print('clicked')
+        print('premium ad closed')
     except Exception as e:
-        # print(e)
+        print("error in premium ad check")
+        print(e)
         pass
 
 def youtube_login(driver, username, password):
