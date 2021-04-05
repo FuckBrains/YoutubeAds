@@ -85,6 +85,9 @@ def main():
 
     data = []
     count = 0
+
+    driver.get("youtube.com")
+
     for videoid in video_list:
         print('checking video ' + videoid)
 
@@ -93,8 +96,7 @@ def main():
 
         # Load video
         driver.get(base_url + videoid)
-        element_present = EC.presence_of_element_located((By.ID, 'info-contents'))
-        WebDriverWait(driver, 5).until(element_present)
+        time.sleep(10)
         print(driver.title)
 
 
