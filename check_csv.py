@@ -4,6 +4,8 @@ import os
 
 filenames = os.listdir('tests/')
 
+outfile = open('check_csv.out', 'w')
+
 count = 0
 ad_count = 0
 removed = 0
@@ -79,8 +81,8 @@ for filename in filenames:
 			else:
 				channel_advertisers[channel_id] = {advertiser : 1}
 
-
-			for reason in row['targetinginfo']:
+			print(row['targetinginfo'])
+			for reason in row['targetinginfo'].split('&&&&'):
 				if reason in targeting:
 					targeting[reason] +=1
 				else:
@@ -103,27 +105,27 @@ for filename in filenames:
 
 
 
-pprint(adtypes)
-print()
-pprint(advertisers)
-print()
-pprint(targeting)
-print()
-pprint('offsite mentions')
-pprint(offsite)
-print()
-pprint('offsite mentions on videos without ads')
-pprint(offsite_no_ads)
-print()
+pprint(adtypes, stream = outfile)
+outfile.write('\n')
+pprint(advertisers, stream = outfile)
+outfile.write('\n')
+pprint(targeting, stream = outfile)
+outfile.write('\n')
+pprint('offsite mentions', stream = outfile)
+pprint(offsite, stream = outfile)
+outfile.write('\n')
+pprint('offsite mentions on videos without ads', stream = outfile)
+pprint(offsite_no_ads, stream = outfile)
+outfile.write('\n')
 for channel in channel_ads:
-	print(channel, 'seen', channels_seen[channel], "times with", channel_ads[channel], 'ads.')
+	outfile.write(channel + ' seen ' +  str(channels_seen[channel]) + " times with " + str(channel_ads[channel]) + ' ads.\n')
 	if (channel_ads[channel] > 0) and (channels_seen[channel] / channel_ads[channel] > 50):
-		pprint(channel_advertisers[channel])
+		pprint(channel_advertisers[channel], stream = outfile)
 
-print(count, " videos")
-print(unique_count, ' unique videos')
-print(len(video_ads), " videos with ads")
-print(ad_count, " ads seen")
-print(removed, " removed")
-print(len(channels_seen), " channels checked")
-print(len(channel_ads), " channels with ads")
+outfile.write(str(count) + " videos\n")
+outfile.write(str(unique_count) + ' unique videos\n')
+outfile.write(str(len(video_ads)) + " videos with ads\n")
+outfile.write(str(ad_count) + " ads seen\n")
+outfile.write(str(removed) + " removed\n")
+outfile.write(str(len(channels_seen)) + " channels checked\n")
+outfile.write(str(len(channel_ads)) + " channels with ads\n")
