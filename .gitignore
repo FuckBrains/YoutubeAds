@@ -6,3 +6,4 @@ geckodriver
 
 **/__pycache__
 *.csv
+*.out

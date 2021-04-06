@@ -81,7 +81,6 @@ for filename in filenames:
 			else:
 				channel_advertisers[channel_id] = {advertiser : 1}
 
-			print(row['targetinginfo'])
 			for reason in row['targetinginfo'].split('&&&&'):
 				if reason in targeting:
 					targeting[reason] +=1
