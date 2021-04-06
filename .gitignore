@@ -1,8 +1,9 @@
 *.exe
 geckodriver.log
 geckodriver
+chromedriver
 
-**/User Data/
+**/UserData/
 
 **/__pycache__
 *.csv

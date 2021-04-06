@@ -70,3 +70,7 @@ def youtube_login(driver, username, password):
     time.sleep(1)
     pEntry.send_keys(Keys.RETURN)
     time.sleep(2)
+
+def check_login(driver):
+    driver.get("https://www.gmail.com")
+    assert(driver.title == "Inbox - csismymajor4444@gmail.com - Gmail")

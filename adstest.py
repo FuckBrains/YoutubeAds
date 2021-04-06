@@ -61,145 +61,154 @@ def main():
             options.add_argument("--headless")
         if config['mute']:
             options.add_argument("--mute-audio")
-        #options.add_argument("user-data-dir=User Data")
+        options.add_argument("user-data-dir=~/YoutubeAds/UserData")
         driver = webdriver.Chrome(options = options)
+        check_login(driver)
+
+    try:
+        actions = ActionChains(driver)
+        print('driver launched successfuly')
+
+        if config['browser'] == 'firefox':
+            # Login to account
+            youtube_login(driver, config['username'], config['password'])
+            print('logged into account ' + config['username'])
+
+        # Setup output file
+        keys = sample_entry.keys()
+        output_file = open('tests/' + test_str + '.csv', 'w', newline='', encoding = 'utf-8') 
+        dict_writer = csv.DictWriter(output_file, keys)
+        dict_writer.writeheader()
+
+        # Generate list of videos
+        video_list = get_video_list('conspiracy_videos.txt', config['numvideos'])
+        print("got video list")
+
+        data = []
+        count = 0
+
+        driver.get("youtube.com")
+
+        for videoid in video_list:
+            print('checking video ' + videoid)
+
+            # Get collection time
+            collectiontime = int(time.time())        
+
+            # Load video
+            driver.get(base_url + videoid)
+            time.sleep(10)
+            print(driver.title)
 
 
-    actions = ActionChains(driver)
-    print('driver launched successfuly')
+            # This function dismisses the premium ad popup, gets called a few times
+            check_for_premium_ad(driver)
 
-    if config['browser'] == 'firefox':
-        # Login to account
-        youtube_login(driver, config['username'], config['password'])
-        print('logged into account ' + config['username'])
+            # Try to play video 
+            played = play_video(driver)
 
-    # Setup output file
-    keys = sample_entry.keys()
-    output_file = open('tests/' + test_str + '.csv', 'w', newline='', encoding = 'utf-8') 
-    dict_writer = csv.DictWriter(output_file, keys)
-    dict_writer.writeheader()
+            check_for_premium_ad(driver)
 
-    # Generate list of videos
-    video_list = get_video_list('conspiracy_videos.txt', config['numvideos'])
-    print("got video list")
+            #check if video was removed
+            removed = check_removed(driver)
 
-    data = []
-    count = 0
+            if removed:
+                # Get empty entry and return
+                entry = copy.copy(sample_entry)
+                entry['videoid'] = videoid
+                entry['datecollected'] = collectiontime
+                entry['testid'] = testid
+                entry['played'] = played
 
-    driver.get("youtube.com")
-
-    for videoid in video_list:
-        print('checking video ' + videoid)
-
-        # Get collection time
-        collectiontime = int(time.time())        
-
-        # Load video
-        driver.get(base_url + videoid)
-        time.sleep(10)
-        print(driver.title)
+                data.append(entry)
+                continue
 
 
-        # This function dismisses the premium ad popup, gets called a few times
-        check_for_premium_ad(driver)
+            if ((config['browser'] == 'firefox') and (not played)):
+                print('Video not played')
+                continue
+            
+            check_for_premium_ad(driver)
+            # Check for ads, returns None for each variable if no ad found
+            results, adurl, adbaseurl, adtype = check_for_ads(driver)
 
-        # Try to play video 
-        played = play_video(driver)
+            check_for_premium_ad(driver)
 
-        check_for_premium_ad(driver)
+            # Check if video is live, changes some DOM elements
+            islive = check_live(driver)
 
-        #check if video was removed
-        removed = check_removed(driver)
-
-        if removed:
-            # Get empty entry and return
-            entry = copy.copy(sample_entry)
-            entry['videoid'] = videoid
-            entry['datecollected'] = collectiontime
-            entry['testid'] = testid
-            entry['played'] = played
-
-            data.append(entry)
-            continue
-
-
-        if ((config['browser'] == 'firefox') and (not played)):
-            print('Video not played')
-            continue
+            # Get video title
+            title = get_title(driver).encode("utf-8", 'ignore').decode('utf-8','ignore')
         
-        check_for_premium_ad(driver)
-        # Check for ads, returns None for each variable if no ad found
-        results, adurl, adbaseurl, adtype = check_for_ads(driver)
+            # Get channel info
+            channelID, channelName = get_channel_info(driver)
+            # Strip non utf chars
+            channelID = channelID.encode("utf-8", 'ignore').decode('utf-8','ignore')
+            channelName = channelName.encode("utf-8", 'ignore').decode('utf-8','ignore')
+            
+            # Get view count
+            views = get_views(driver)
+            
+            # If it's live, the engagement data is weird so we ignore it
+            if islive:
+                likes, dislikes, comments = -1, -1, -1
+            # Else get likes and number of comments
+            else:
+                likes, dislikes = get_likes(driver)
 
-        check_for_premium_ad(driver)
+                comments = get_comment_count(driver)
 
-        # Check if video is live, changes some DOM elements
-        islive = check_live(driver)
+            # Get video description info and list of links 
+            descr, descrurls = get_description(driver)
 
-        # Get video title
-        title = get_title(driver).encode("utf-8", 'ignore').decode('utf-8','ignore')
+            # Strip non utf chars
+            descr = descr.encode("utf-8", 'ignore').decode('utf-8','ignore')
+            for i in range(len(descrurls)):
+                descrurls[i] = descrurls[i].encode("utf-8", 'ignore').decode('utf-8','ignore')
+            # Turn list of links into string for storage
+            descrurls = "&&&&".join(descrurls)
+
+            # Get upload date
+            dateuploaded, uploadts = get_upload_date(driver)
+
+            # Store data
+            data.append({
+                'videoid' : videoid,
+                'videoname' : title,
+                'channelid' : channelID,
+                'channelname' : channelName,
+                'islive' : islive,
+                'views' : views,
+                'comments' : comments,
+                'likes' : likes,
+                'dislikes' : dislikes,
+                'descr' : descr,
+                'descrurls' : descrurls,
+                'adtype' : adtype,
+                'advertiser' : adbaseurl,
+                'adfullurl' : adurl,
+                'targetinginfo' : results,
+                'datecollected' : collectiontime,
+                'dateuploaded' : dateuploaded,
+                'uploadts' : uploadts,
+                'classification' : None,
+                'testid' : testid,
+                'removed' : False,
+                'played' : played
+            })
+
+            count += 1
+            if ((count % config['iofreq']) == 0):
+                dict_writer.writerows(data)
+                data = []
+
+    except Exception as e:
+        print("error in main loop, cleaning up")
+        print(e)
     
-        # Get channel info
-        channelID, channelName = get_channel_info(driver)
-        # Strip non utf chars
-        channelID = channelID.encode("utf-8", 'ignore').decode('utf-8','ignore')
-        channelName = channelName.encode("utf-8", 'ignore').decode('utf-8','ignore')
-        
-        # Get view count
-        views = get_views(driver)
-        
-        # If it's live, the engagement data is weird so we ignore it
-        if islive:
-            likes, dislikes, comments = -1, -1, -1
-        # Else get likes and number of comments
-        else:
-            likes, dislikes = get_likes(driver)
-
-            comments = get_comment_count(driver)
-
-        # Get video description info and list of links 
-        descr, descrurls = get_description(driver)
-
-        # Strip non utf chars
-        descr = descr.encode("utf-8", 'ignore').decode('utf-8','ignore')
-        for i in range(len(descrurls)):
-            descrurls[i] = descrurls[i].encode("utf-8", 'ignore').decode('utf-8','ignore')
-        # Turn list of links into string for storage
-        descrurls = "&&&&".join(descrurls)
-
-        # Get upload date
-        dateuploaded, uploadts = get_upload_date(driver)
-
-        # Store data
-        data.append({
-            'videoid' : videoid,
-            'videoname' : title,
-            'channelid' : channelID,
-            'channelname' : channelName,
-            'islive' : islive,
-            'views' : views,
-            'comments' : comments,
-            'likes' : likes,
-            'dislikes' : dislikes,
-            'descr' : descr,
-            'descrurls' : descrurls,
-            'adtype' : adtype,
-            'advertiser' : adbaseurl,
-            'adfullurl' : adurl,
-            'targetinginfo' : results,
-            'datecollected' : collectiontime,
-            'dateuploaded' : dateuploaded,
-            'uploadts' : uploadts,
-            'classification' : None,
-            'testid' : testid,
-            'removed' : False,
-            'played' : played
-        })
-
-        count += 1
-        if ((count % config['iofreq']) == 0):
-            dict_writer.writerows(data)
-            data = []
+    print('closing driver')
+    driver.quit()
+    print("goodbye")
 
 
 
