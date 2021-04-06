@@ -63,6 +63,7 @@ def main():
             options.add_argument("--mute-audio")
         options.add_argument("user-data-dir=C:\\Users\\Cameron\\Documents\\YoutubeAds\\UserData")
         driver = webdriver.Chrome(options = options)
+        time.sleep(5)
         check_login(driver)
 
     try:
