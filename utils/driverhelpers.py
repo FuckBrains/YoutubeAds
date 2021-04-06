@@ -73,5 +73,9 @@ def youtube_login(driver, username, password):
 
 def check_login(driver):
     driver.get("https://www.gmail.com")
+    print('gmail page title', driver.title)
+    driver.get("chrome://version/")
     print(driver.title)
+    profile_path = driver.find_element_by_id("profile_path")
+    print(profile_path.text)
     # assert(driver.title == "Inbox - csismymajor4444@gmail.com - Gmail")
