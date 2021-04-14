@@ -43,11 +43,16 @@ def get_video_list(filename, num_videos):
     infile = open(filename, 'r')
     video_list = []
     for line in infile:
+        if line.strip() == "#NAME?":
+            continue
         video_list.append(line.strip())
 
     infile.close()
+    print(len(video_list))
+    print(video_list[:num_videos])
 
     random.shuffle(video_list)
+    print(video_list[:num_videos])
 
     return video_list[:num_videos]
 

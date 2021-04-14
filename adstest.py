@@ -29,12 +29,13 @@ def main():
     testid, test_str = get_test_id()
     config = {
         'headless' : False,
-        'browser' : 'chrome',
+        'browser' : 'firefox',
         'mute' : True,
-        'numvideos' : 1000,
         'iofreq' : 10,
         'username' : "csismymajor4444",
-        'password' : "N01pbl0ckpls!!"
+        'password' : "N01pbl0ckpls!!",
+        'numvideos' : 5000,
+        'video_list' : 'conspiracy_videos.txt'
     }
 
     # ARG PARSE GOES HERE
@@ -82,7 +83,7 @@ def main():
         dict_writer.writeheader()
 
         # Generate list of videos
-        video_list = get_video_list('conspiracy_videos.txt', config['numvideos'])
+        video_list = get_video_list(config['video_list'], config['numvideos'])
         print("got video list")
 
         data = []
@@ -98,8 +99,6 @@ def main():
 
             # Load video
             driver.get(base_url + videoid)
-            time.sleep(10)
-            print(driver.title)
 
 
             # This function dismisses the premium ad popup, gets called a few times
