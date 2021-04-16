@@ -32,6 +32,7 @@ for filename in filenames:
 	reader = csv.DictReader(infile)
 
 	for row in reader:
+		print(row['descrurls'])
 		video_id = row['videoid']
 		if video_id in seen:
 			seen[video_id] += 1

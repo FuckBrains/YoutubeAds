@@ -28,3 +28,4 @@ sample_entry = {
     'played' : None
 }
 
+offsite = {'paypal' : 0, 'patreon' : 0, 'twitter': 0, 'parler' : 0, 'sponsor' : 0, 'gofundme' : 0, 'facebook': 0, 'rumble' : 0, ' gab ' : 0, 'gab:' : 0, 'telegram' : 0, 'donation' : 0, 'bitchute' : 0, 'merch': 0, 'merchandise': 0, 'steemit' : 0, 'py.pl' : 0, 'etsy' : 0}

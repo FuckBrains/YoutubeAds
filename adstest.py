@@ -34,8 +34,8 @@ def main():
         'iofreq' : 10,
         'username' : "csismymajor4444",
         'password' : "N01pbl0ckpls!!",
-        'numvideos' : 5000,
-        'video_list' : 'conspiracy_videos.txt'
+        'numvideos' : 50,
+        'video_list' : 'chan_2_vec_videos.txt'
     }
 
     # ARG PARSE GOES HERE
